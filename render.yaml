@@ -17,8 +17,7 @@ services:
           property: connectionString
     healthCheckPath: /
     numInstances: 1
-    autoDeploy: true
-    name: rails-blog
+    autoDeploy: true 
     buildCommand: "./build.sh"
     startCommand: "./start.sh"
 
