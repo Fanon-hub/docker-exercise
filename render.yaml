@@ -18,6 +18,10 @@ services:
     healthCheckPath: /
     numInstances: 1
     autoDeploy: true
+    name: rails-blog
+    buildCommand: "./build.sh"
+    startCommand: "./start.sh"
+
 
 databases:
   - name: rails-blog-db
