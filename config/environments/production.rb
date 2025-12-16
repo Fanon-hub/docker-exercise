@@ -72,7 +72,7 @@ Rails.application.configure do
   # the I18n.default_locale when a translation cannot be found).
   config.i18n.fallbacks = true
 
-  Rails.application.config.hosts << "localhost"
+  Rails.application.config.hosts.clear if ENV['RAILS_ENV'] == 'production' 
   # Don't log any deprecations.
   config.active_support.report_deprecations = false
 
