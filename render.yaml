@@ -15,12 +15,10 @@ services:
         fromDatabase:
           name: rails-blog-db
           property: connectionString
+    # Remove buildCommand and startCommand if using Dockerfile CMD
     healthCheckPath: /
     numInstances: 1
-    autoDeploy: true 
-    buildCommand: "./build.sh"
-    startCommand: "./start.sh"
-
+    autoDeploy: true
 
 databases:
   - name: rails-blog-db

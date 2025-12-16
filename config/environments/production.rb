@@ -1,6 +1,8 @@
 require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
+  # Allow Render domain
+  Rails.application.config.hosts << /.*\.onrender\.com/
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
@@ -72,7 +74,7 @@ Rails.application.configure do
   # the I18n.default_locale when a translation cannot be found).
   config.i18n.fallbacks = true
 
-  Rails.application.config.hosts.clear if ENV['RAILS_ENV'] == 'production' 
+  # Rails.application.config.hosts.clear if ENV['RAILS_ENV'] == 'production' 
   # Don't log any deprecations.
   config.active_support.report_deprecations = false
 
